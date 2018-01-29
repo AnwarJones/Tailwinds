@@ -1,0 +1,10 @@
+#myVideo {
+    background-attachment: scroll;
+    background-position: center;
+    background-size: cover;
+}
+@media only screen and (max-device-width: 1024px) {
+    .myVideo {
+      display: none;
+    }
+  }

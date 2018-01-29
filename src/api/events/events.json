@@ -1,0 +1,38 @@
+[
+    {
+        "eventId":1,
+        "eventTitle": "Speaking",
+        "eventDate": "1/14/18",
+        "eventDetails":"Jianbing celiac four dollar toast lomo poke poutine pour-over semiotics intelligentsia man bun kitsch shaman. Cronut next level flannel raw denim, artisan 90's distillery poutine food truck humblebrag farm-to-table enamel pin chillwave. Shabby chic copper mug la croix, stumptown lomo four loko normcore prism waistcoat messenger bag mlkshk post-ironic health goth 8-bit. Aesthetic dreamcatcher 90's meh cornhole before they sold out, disrupt chillwave waistcoat."
+    },
+    {
+        "eventId":2,
+        "eventTitle": "Grant Writing Seminar",
+        "eventDate": "2/23/18",
+        "eventDetails":"Jianbing celiac four dollar toast lomo poke poutine pour-over semiotics intelligentsia man bun kitsch shaman. Cronut next level flannel raw denim, artisan 90's distillery poutine food truck humblebrag farm-to-table enamel pin chillwave. Shabby chic copper mug la croix, stumptown lomo four loko normcore prism waistcoat messenger bag mlkshk post-ironic health goth 8-bit. Aesthetic dreamcatcher 90's meh cornhole before they sold out, disrupt chillwave waistcoat."
+    },
+    {
+        "eventId":3,
+        "eventTitle": "Community Summit",
+        "eventDate": "6/19/18",
+        "eventDetails":"Jianbing celiac four dollar toast lomo poke poutine pour-over semiotics intelligentsia man bun kitsch shaman. Cronut next level flannel raw denim, artisan 90's distillery poutine food truck humblebrag farm-to-table enamel pin chillwave. Shabby chic copper mug la croix, stumptown lomo four loko normcore prism waistcoat messenger bag mlkshk post-ironic health goth 8-bit. Aesthetic dreamcatcher 90's meh cornhole before they sold out, disrupt chillwave waistcoat."
+    },
+    {
+        "eventId":4,
+        "eventTitle": "KC Economic Convention",
+        "eventDate": "7/23/18",
+        "eventDetails":"Jianbing celiac four dollar toast lomo poke poutine pour-over semiotics intelligentsia man bun kitsch shaman. Cronut next level flannel raw denim, artisan 90's distillery poutine food truck humblebrag farm-to-table enamel pin chillwave. Shabby chic copper mug la croix, stumptown lomo four loko normcore prism waistcoat messenger bag mlkshk post-ironic health goth 8-bit. Aesthetic dreamcatcher 90's meh cornhole before they sold out, disrupt chillwave waistcoat."
+    },
+    {
+        "eventId":5,
+        "eventTitle": "Community Peace Summit",
+        "eventDate": "8/19/18",
+        "eventDetails":"Jianbing celiac four dollar toast lomo poke poutine pour-over semiotics intelligentsia man bun kitsch shaman. Cronut next level flannel raw denim, artisan 90's distillery poutine food truck humblebrag farm-to-table enamel pin chillwave. Shabby chic copper mug la croix, stumptown lomo four loko normcore prism waistcoat messenger bag mlkshk post-ironic health goth 8-bit. Aesthetic dreamcatcher 90's meh cornhole before they sold out, disrupt chillwave waistcoat."
+    },
+    {
+        "eventId":6,
+        "eventTitle": "Freedom Cafe",
+        "eventDate": "9/29/18",
+        "eventDetails":"Jianbing celiac four dollar toast lomo poke poutine pour-over semiotics intelligentsia man bun kitsch shaman. Cronut next level flannel raw denim, artisan 90's distillery poutine food truck humblebrag farm-to-table enamel pin chillwave. Shabby chic copper mug la croix, stumptown lomo four loko normcore prism waistcoat messenger bag mlkshk post-ironic health goth 8-bit. Aesthetic dreamcatcher 90's meh cornhole before they sold out, disrupt chillwave waistcoat."
+    }
+]
