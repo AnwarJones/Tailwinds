@@ -5,7 +5,7 @@ import { IEvent } from './ievent';
 @Component({
   selector: 'app-events',
   templateUrl: './events.component.html',
-  styleUrls: ['./events.component.css'],
+  //,  styleUrls: ['../parallax.css'],
   providers:[EventsServiceService]
 })
 export class EventsComponent implements OnInit {

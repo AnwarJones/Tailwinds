@@ -1,9 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-stories',
-  templateUrl: './stories.component.html',
-  styleUrls: ['./stories.component.css']
+  templateUrl: './stories.component.html'
+  //,styleUrls: ['../parallax.css']
 })
 export class StoriesComponent implements OnInit {
 
