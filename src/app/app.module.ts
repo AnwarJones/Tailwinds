@@ -15,6 +15,8 @@ import { WelcomeComponent } from './welcome/welcome.component';
 import { StoriesComponent } from './stories/stories.component';
 import { EventsComponent } from './events/events.component';
 import { HttpClientModule } from '@angular/common/http';
+import { AboutPageCompanyComponent } from './about-page/about-page-company.component';
+import { AboutPageMissionComponent } from './about-page/about-page-mission.component';
 
 
 @NgModule({
@@ -29,7 +31,9 @@ import { HttpClientModule } from '@angular/common/http';
     ResourcesComponent,
     WelcomeComponent,
     StoriesComponent,
-    EventsComponent
+    EventsComponent,
+    AboutPageCompanyComponent,
+    AboutPageMissionComponent,
   ],
   imports: [
     BrowserModule,
@@ -41,11 +45,8 @@ import { HttpClientModule } from '@angular/common/http';
       {path: 'news', component: NewsComponent },
       {path: 'resources', component: ResourcesComponent },
       {path: 'contact', component: ContactsComponent },
-      {path: '', redirectTo: 'welcome', pathMatch:'full' },
-      {path: '**',redirectTo: 'welcome', pathMatch: 'full' }
-
-
-
+      {path: '', redirectTo: 'welcome', pathMatch: 'full' },
+      {path: '**', redirectTo: 'welcome', pathMatch: 'full' }
     ])
   ],
   providers: [],

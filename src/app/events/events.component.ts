@@ -4,9 +4,9 @@ import { IEvent } from './ievent';
 
 @Component({
   selector: 'app-events',
-  templateUrl: './events.component.html',
-  //,  styleUrls: ['../parallax.css'],
-  providers:[EventsServiceService]
+  templateUrl: './events.component.html'
+  , styleUrls: ['./events.component.css'],
+  providers: [EventsServiceService]
 })
 export class EventsComponent implements OnInit {
   events: IEvent[] = [];
