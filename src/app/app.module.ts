@@ -15,8 +15,6 @@ import { WelcomeComponent } from './welcome/welcome.component';
 import { StoriesComponent } from './stories/stories.component';
 import { EventsComponent } from './events/events.component';
 import { HttpClientModule } from '@angular/common/http';
-import { AboutPageCompanyComponent } from './about-page/about-page-company.component';
-import { AboutPageMissionComponent } from './about-page/about-page-mission.component';
 
 
 @NgModule({
@@ -32,8 +30,6 @@ import { AboutPageMissionComponent } from './about-page/about-page-mission.compo
     WelcomeComponent,
     StoriesComponent,
     EventsComponent,
-    AboutPageCompanyComponent,
-    AboutPageMissionComponent,
   ],
   imports: [
     BrowserModule,

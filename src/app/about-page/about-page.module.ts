@@ -1,12 +1,29 @@
 import { NgModule } from "@angular/core";
-import { CommonModule } from "@angular/common";
-import { FormsModule } from '@angular/forms';
+import { RouterModule} from '@angular/router';
+import { AboutPageMissionComponent } from './about-page-mission.component';
+import { AboutPageBioComponent } from './about-page-bio.component';
+import { AboutPageComponent} from './about-page.component';
 
 @NgModule({
-    imports: [ CommonModule],
-    exports: [
-        CommonModule,
-        FormsModule
-    ]
+    imports: [ 
+        RouterModule.forChild([
+            { 
+                path:''
+                ,component: AboutPageComponent
+                ,children: [
+                {path: '', redirectTo: 'staff', pathMatch: 'full'},
+                { path: 'mission', component: AboutPageMissionComponent},
+                { path: 'staff', component: AboutPageBioComponent}
+            ]}
+           
+        ])
+       ],
+    declarations: [
+        AboutPageComponent,
+        AboutPageBioComponent,
+        AboutPageMissionComponent,        
+        ]
 })
-export class SharedModule { }
+export class AppModule {
+
+}
