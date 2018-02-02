@@ -15,12 +15,17 @@ import { HttpClientModule } from '@angular/common/http';
 import { AboutPageModule } from './about-page/about-page.module';
 import { AboutPageComponent } from './about-page/about-page.component';
 import { AppRoutingModule } from './app-routing.module';
+import { HttpModule } from '@angular/http';
+import { InMemoryWebApiModule } from 'angular-in-memory-web-api';
+import { EmployeeData } from './about-page/employee-data';
 
 
 @NgModule({
   imports: [
     BrowserModule,
     HttpClientModule,
+    HttpModule,
+    InMemoryWebApiModule.forRoot(EmployeeData, { delay: 1000}),
     AboutPageModule,
     AppRoutingModule
   ],
