@@ -1,12 +1,9 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { RouterModule } from '@angular/router';
-
 
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { BackgroundvidComponent } from './backgroundvid/backgroundvid.component';
-import { AboutPageComponent } from './about-page/about-page.component';
 import { ServicesComponent } from './services/services.component';
 import { NewsComponent } from './news/news.component';
 import { ContactsComponent } from './contacts/contacts.component';
@@ -15,14 +12,22 @@ import { WelcomeComponent } from './welcome/welcome.component';
 import { StoriesComponent } from './stories/stories.component';
 import { EventsComponent } from './events/events.component';
 import { HttpClientModule } from '@angular/common/http';
+import { AboutPageModule } from './about-page/about-page.module';
+import { AboutPageComponent } from './about-page/about-page.component';
+import { AppRoutingModule } from './app-routing.module';
 
 
 @NgModule({
+  imports: [
+    BrowserModule,
+    HttpClientModule,
+    AboutPageModule,
+    AppRoutingModule
+  ],
   declarations: [
     AppComponent,
     NavbarComponent,
     BackgroundvidComponent,
-    AboutPageComponent,
     ServicesComponent,
     NewsComponent,
     ContactsComponent,
@@ -31,21 +36,7 @@ import { HttpClientModule } from '@angular/common/http';
     StoriesComponent,
     EventsComponent,
   ],
-  imports: [
-    BrowserModule,
-    HttpClientModule,
-    RouterModule.forRoot ([
-      {path: 'welcome', component: WelcomeComponent},
-      {path: 'about', component: AboutPageComponent },
-      {path: 'services', component: ServicesComponent },
-      {path: 'news', component: NewsComponent },
-      {path: 'resources', component: ResourcesComponent },
-      {path: 'contact', component: ContactsComponent },
-      {path: '', redirectTo: 'welcome', pathMatch: 'full' },
-      {path: '**', redirectTo: 'welcome', pathMatch: 'full' }
-    ])
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
+    providers: [],
+    bootstrap: [AppComponent]
 })
 export class AppModule { }
