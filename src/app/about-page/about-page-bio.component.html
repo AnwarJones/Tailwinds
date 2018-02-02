@@ -1,10 +1,17 @@
-
-<h3>About the team</h3>
-<div class="row">
-  <div class="col-6">
-    <ul>
-      <li *ngFor= "let employee of employees">
-        {{employee.firstName}}
-      </li>
-    </ul>
+<div class="panel panel-primary">
+    <div class="panel-heading"><h1>Meet our team</h1></div>
+    <div class="row">
+      <div class="col-3">
+        <p>At Tailwinds Consulting we care for the success of your projects.  With that in mind, we focus on finding the best talents and partnerships</p>
+        <ul>
+          <li *ngFor="let em of employees">
+            <a class="btn" (click) = "employeeSelect(em.id)" >{{em.firstName}} {{em.lastName}}</a>
+          </li>
+        </ul>
+    </div>
+    <div class="col-9">
+      {{selectedId}}
+      {{selectedEmployee.firstName}}
+    </div>
 </div>
+
