@@ -74,7 +74,10 @@ export class EmployeeService {
             photoUrl: null,
             firstName: null,
             lastName: null,
-            title: null
+            title: null,
+            academics: null,
+            experience: null,
+            statement: null
         };
     }
 }

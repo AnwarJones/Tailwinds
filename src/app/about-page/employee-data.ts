@@ -79,7 +79,9 @@ export class EmployeeData implements InMemoryDbService, InMemoryBackendConfig {
                     'degree':'Masters'
                 }],
                 'title': 'Head Husband',
-                'experience':['']
+                'experience':[],
+                'statement':`Hey, Luke! May the Force be with you. Red Five standing by.
+                             You don't believe in the Force, do you? As you wish. I'm trying not to, kid.`
             },
             {
                 'id': 3,
@@ -102,7 +104,7 @@ export class EmployeeData implements InMemoryDbService, InMemoryBackendConfig {
                         'degree':'Preschool Equivalency'
                         }
                 ],
-                'experience':[''],
+                'experience':[],
                 'statement':`Hey, Luke! May the Force be with you.
                              Red Five standing by. You don't believe in the Force, do you? 
                              As you wish. I'm trying not to, kid.`
@@ -122,7 +124,7 @@ export class EmployeeData implements InMemoryDbService, InMemoryBackendConfig {
                     'degree':'Cutest Kid'
                     }
                     ],
-                'experience':[''],
+                'experience':[],
                 'statement': `Dantooine. They're on Dantooine. You mean it controls your actions?
                              Obi-Wan is here. The Force is with him. Oh God, my uncle. How am I ever gonna explain this?`
             }

@@ -6,6 +6,8 @@ import { AboutPageMissionComponent } from './about-page-mission.component';
 import { AboutPageBioComponent } from './about-page-bio.component';
 import { AboutPageComponent} from './about-page.component';
 import { EmployeeService } from "./employee.service";
+import { AboutPageCompanyComponent } from "./about-page-company.component";
+import { BiosComponent } from "./bios/bios.component";
 
 @NgModule({
     imports: [
@@ -15,7 +17,14 @@ import { EmployeeService } from "./employee.service";
             , children: [
                 {path: '', component: AboutPageComponent},
                 { path: 'mission', component: AboutPageMissionComponent},
-                { path: 'staff', component: AboutPageBioComponent}
+                {   path: 'team', 
+                    component: AboutPageBioComponent,
+                    // children: [
+                    //     { path: '', redirectTo: 'about-page', pathMatch: 'full'},
+                    //     { path: ':id', component: BiosComponent}
+                    // ]
+                },
+                { path: 'company', component: AboutPageCompanyComponent}
             ]}
         ])
        ],
@@ -23,7 +32,8 @@ import { EmployeeService } from "./employee.service";
         AboutPageComponent,
         AboutPageBioComponent,
         AboutPageMissionComponent,
-        ],
+        BiosComponent
+      ],
     providers: [EmployeeService]
 })
 export class AboutPageModule { }

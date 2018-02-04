@@ -1,7 +1,7 @@
 {
   "name": "tail-winds-site",
-  "version": "0.0.0",
-  "license": "MIT",
+  "version": "1.0.0",
+  "license": "anwarjones",
   "scripts": {
     "ng": "ng",
     "start": "ng serve -o",

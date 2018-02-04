@@ -19,6 +19,7 @@ import { HttpModule } from '@angular/http';
 import { InMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { EmployeeData } from './about-page/employee-data';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { AboutPageCompanyComponent } from './about-page/about-page-company.component';
 
 
 @NgModule({
@@ -42,6 +43,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     WelcomeComponent,
     StoriesComponent,
     EventsComponent,
+    AboutPageCompanyComponent
   ],
     providers: [],
     bootstrap: [AppComponent]
