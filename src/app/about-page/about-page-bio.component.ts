@@ -13,6 +13,8 @@ export class AboutPageBioComponent implements OnInit {
   errorMessage: string;
   selectedEmployee: IEmployee;
   selectedId: number;
+  imageheigth: number = 2;
+  imagewidth: number = 1;
 
   constructor(private employeeService: EmployeeService,
               private route: ActivatedRoute) { }

@@ -18,6 +18,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { HttpModule } from '@angular/http';
 import { InMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { EmployeeData } from './about-page/employee-data';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
 @NgModule({
@@ -27,7 +28,8 @@ import { EmployeeData } from './about-page/employee-data';
     HttpModule,
     InMemoryWebApiModule.forRoot(EmployeeData, { delay: 1000}),
     AboutPageModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule
   ],
   declarations: [
     AppComponent,

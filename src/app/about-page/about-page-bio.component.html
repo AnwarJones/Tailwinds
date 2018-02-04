@@ -1,7 +1,8 @@
+<!-- <div class="parallax"></div> -->
 <div class="panel panel-primary">
-    <div class="panel-heading"><h1>Meet our team</h1></div>
+    <div class="panel-heading"><h1 style="color:rgb(70, 216, 57)">Meet our team</h1></div>
     <div class="row">
-      <div class="col-3">
+      <div class="col-4">
         <p>At Tailwinds Consulting we care for the success of your projects.  With that in mind, we focus on finding the best talents and partnerships</p>
         <ul>
           <li *ngFor="let em of employees">
@@ -9,9 +10,45 @@
           </li>
         </ul>
     </div>
-    <div class="col-9">
-      {{selectedId}}
-      {{selectedEmployee.firstName}}
+    <div class="col">
+      <div class="row">
+        <div class="col">
+          <h4>{{selectedEmployee.firstName}} {{selectedEmployee.lastName}}</h4>
+          <h6>{{selectedEmployee.title}}</h6>
+            <img [src] = "selectedEmployee.photoUrl"
+            [style.width.px] = "imageWidth"
+            [style.height.px] = "imageHeight">
+        </div>
+        <div class="col">
+          <br>
+          <br/>
+
+          <h6>Academic Achievements</h6>
+          <ul>
+            <li *ngFor = "let sc of selectedEmployee.academics">
+              {{sc.school}} -- {{sc.graduationYear}}
+            </li>
+          </ul>
+        </div>
+        <div class="col">
+          <br/>
+
+          <br/>
+
+          <h6>Career Experience</h6>
+          <ul>
+            <li *ngFor = "let job of selectedEmployee.experience">
+              {{job.organization}} - {{job.title}} - {{job.endYear}}
+            </li>
+          </ul>          
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-12">
+          <em>Personal Statement: </em>
+          {{selectedEmployee.statement}}
+        </div>
+      </div>
     </div>
 </div>
 
