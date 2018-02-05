@@ -15,7 +15,7 @@ export class AboutPageBioComponent implements OnInit {
   errorMessage: string;
   selectedEmployee: IEmployee;
   selectedId: number;
-  
+
 
   constructor(private employeeService: EmployeeService,
               private route: ActivatedRoute) { }
@@ -28,7 +28,6 @@ export class AboutPageBioComponent implements OnInit {
   }
   employeeSelect(id: number): void {
     this.selectedId = id;
-    console.log(this.selectedId);
     this.employeeService.getEmployee(this.selectedId)
     .subscribe(
       employee => this.selectedEmployee = employee

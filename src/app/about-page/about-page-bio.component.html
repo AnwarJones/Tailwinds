@@ -4,7 +4,7 @@
     <div class="row">
       <div class="col-4">
         <p>At Tailwinds Consulting we believe that great relationships will lead to success.  We build a great relationship built around helping you reach your goals. Great relationships need great people, for our success and yours we have assembled a great team. </p>
-        <ul *ngIf = "employees.length > 1">
+        <ul *ngIf = "employees?.length > 1">
           <li *ngFor="let em of employees">
             <a class="btn" (click) = "employeeSelect(em.id)" >{{em.firstName}} {{em.lastName}}</a>
           </li>

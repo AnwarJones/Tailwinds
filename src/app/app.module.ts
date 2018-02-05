@@ -20,6 +20,7 @@ import { InMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { EmployeeData } from './about-page/employee-data';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AboutPageCompanyComponent } from './about-page/about-page-company.component';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -30,7 +31,8 @@ import { AboutPageCompanyComponent } from './about-page/about-page-company.compo
     InMemoryWebApiModule.forRoot(EmployeeData, { delay: 1000}),
     AboutPageModule,
     AppRoutingModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    FormsModule
   ],
   declarations: [
     AppComponent,

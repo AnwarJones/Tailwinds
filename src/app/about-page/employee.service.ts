@@ -15,16 +15,14 @@ export class EmployeeService {
     private baseUrl = 'api/employees';
     constructor (private http: HttpClient) { }
     getEmployees(): Observable<IEmployee[]> {
-        return this.http.get<IEmployee[]>(this.baseUrl)
-        .do(data => console.log('getEmployees: ' + JSON.stringify(data), (this.handleError)));
+        return this.http.get<IEmployee[]>(this.baseUrl);
     }
     getEmployee(id: number): Observable<IEmployee> {
         if (id === 0) {
             return Observable.of(this.initializeEmployee());
         }
         const url = `${this.baseUrl}/${id}`;
-        return this.http.get<IEmployee>(url)
-        .do(data => console.log('get Employee: ' + JSON.stringify(data), (this.handleError)));
+        return this.http.get<IEmployee>(url);
     }
     deleteEmployee(id: number): Observable<Response> {
         const headers = new HttpHeaders({ 'Content-Type': 'application/json' });
@@ -32,7 +30,6 @@ export class EmployeeService {
 
        const url = `${this.baseUrl}/${id}`;
        return this.http.delete(url, {headers})
-           .do(data => console.log('deleteEmployee: ' + JSON.stringify(data)))
            .catch(this.handleError);
     }
     saveEmployee( employee: IEmployee): Observable<IEmployee> {
