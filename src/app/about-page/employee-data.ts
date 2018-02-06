@@ -143,8 +143,7 @@ export class EmployeeData implements InMemoryDbService, InMemoryBackendConfig {
                 'eventDate': Date.parse('March 1, 2018'),
                 'eventDetails': 'Something else is happening on this date'
             }
-        ]
+        ];
         return {employees, events};
-        
     }
 }

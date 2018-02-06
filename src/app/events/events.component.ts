@@ -16,7 +16,10 @@ export class EventsComponent implements OnInit {
 
   ngOnInit(): void {
     this._eventsService.getEvents()
-    .subscribe(events => {this.events = events}, error => this.errorMessage = <any>error)
+    .subscribe(
+      events => this.events = events
+      , error => this.errorMessage = <any>error);
+      console.log(this.errorMessage);
   }
 
 }
