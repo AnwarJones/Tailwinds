@@ -22,7 +22,8 @@
       "styles": [
         "styles.css",
         "../node_modules/bootstrap/dist/css/bootstrap.min.css",
-        "./app/parallax.css"
+        "./app/parallax.css",
+        "node_modules/angular-calendar/css/angular-calendar.css"
       ],
       "scripts": [
         "../node_modules/jquery/dist/jquery.min.js",

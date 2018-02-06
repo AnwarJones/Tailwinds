@@ -21,6 +21,8 @@ import { EmployeeData } from './about-page/employee-data';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AboutPageCompanyComponent } from './about-page/about-page-company.component';
 import { FormsModule } from '@angular/forms';
+import { CalendarModule } from 'angular-calendar';
+import { CalendarComponent } from './contacts/calendar/calendar.component';
 
 
 @NgModule({
@@ -32,7 +34,8 @@ import { FormsModule } from '@angular/forms';
     AboutPageModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    FormsModule
+    FormsModule,
+    CalendarModule.forRoot()
   ],
   declarations: [
     AppComponent,
@@ -45,7 +48,8 @@ import { FormsModule } from '@angular/forms';
     WelcomeComponent,
     StoriesComponent,
     EventsComponent,
-    AboutPageCompanyComponent
+    AboutPageCompanyComponent,
+    CalendarComponent
   ],
     providers: [],
     bootstrap: [AppComponent]

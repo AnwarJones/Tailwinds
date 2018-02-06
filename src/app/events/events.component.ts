@@ -19,7 +19,6 @@ export class EventsComponent implements OnInit {
     .subscribe(
       events => this.events = events
       , error => this.errorMessage = <any>error);
-      console.log(this.errorMessage);
   }
 
 }
