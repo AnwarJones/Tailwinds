@@ -1,7 +1,7 @@
 
 export interface IEvent {
-    eventId:number,
+    id:number,
     eventTitle:string,
-    eventDate: Date
+    eventDate: number
     eventDetails:string
 }

@@ -9,16 +9,12 @@ import { IEvent } from './ievent';
 
 @Injectable()
 export class EventsServiceService {
-  private _eventUrl= './api/events/events.json';
-  constructor(private _http: HttpClient) { }
+  private eventUrl= './api/events';
+  constructor(private http: HttpClient) { }
 
   getEvents(): Observable<IEvent[]>{
-    return this._http.get<IEvent[]>(this._eventUrl)
-    .do(data => data.forEach(d=>{
-      d.eventDate = new Date(d.eventDate);
-      console.log(JSON.stringify(data))
-    }))
-    .catch(this.handleError);
+    return this.http.get<IEvent[]>(this.eventUrl);
+    
   }
   private handleError(err: HttpErrorResponse) {
     console.log(err.message);

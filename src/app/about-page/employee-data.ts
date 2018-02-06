@@ -1,6 +1,7 @@
 import { InMemoryDbService, InMemoryBackendConfig } from 'angular-in-memory-web-api';
 
 import { IEmployee} from '../employee';
+import { IEvent } from '../events/ievent';
 export class EmployeeData implements InMemoryDbService, InMemoryBackendConfig {
     createDb() {
         let employees: IEmployee[] = [
@@ -129,6 +130,21 @@ export class EmployeeData implements InMemoryDbService, InMemoryBackendConfig {
                              Obi-Wan is here. The Force is with him. Oh God, my uncle. How am I ever gonna explain this?`
             }
         ];
-        return {employees};
+        let events: IEvent[] = [
+            {
+                'id': 1,
+                'eventTitle': 'First Event',
+                'eventDate': Date.parse('February 15, 2018'),
+                'eventDetails': 'Something is happening on this date'
+            },
+            {
+                'id': 2,
+                'eventTitle': 'Second Event',
+                'eventDate': Date.parse('March 1, 2018'),
+                'eventDetails': 'Something else is happening on this date'
+            }
+        ]
+        return {employees, events};
+        
     }
 }
