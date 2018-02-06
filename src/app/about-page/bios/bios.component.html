@@ -1,8 +1,8 @@
 <div class="row">
     <div class="col">
-      <h4>{{displayEmployee.firstName}} {{displayEmployee.lastName}}</h4>
-      <h6>{{displayEmployee.title}}</h6>
-        <img [src] = "displayEmployee.photoUrl"
+      <h4>{{displayEmployee?.firstName}} {{displayEmployee?.lastName}}</h4>
+      <h6>{{displayEmployee?.title}}</h6>
+        <img [src] = "displayEmployee?.photoUrl"
         [style.width.px] = "imageWidth"
         [style.height.px] = "imageHeight">
     </div>
@@ -12,7 +12,7 @@
 
       <h6>Academic Achievements</h6>
       <ul>
-        <li *ngFor = "let sc of displayEmployee.academics">
+        <li *ngFor = "let sc of displayEmployee?.academics">
           {{sc.school}} -- {{sc.graduationYear}}
         </li>
       </ul>
@@ -24,7 +24,7 @@
 
       <h6>Career Experience</h6>
       <ul>
-        <li *ngFor = "let job of displayEmployee.experience">
+        <li *ngFor = "let job of displayEmployee?.experience">
           {{job.organization}} - {{job.title}} - {{job.endYear}}
         </li>
       </ul>          
@@ -33,6 +33,6 @@
   <div class="row">
     <div class="col-12">
       <em>Personal Statement: </em>
-      {{displayEmployee.statement}}
+      {{displayEmployee?.statement}}
     </div>
   </div>

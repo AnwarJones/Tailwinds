@@ -17,7 +17,7 @@ export class BiosComponent implements OnInit {
   constructor(private route: ActivatedRoute,
               private employeeService: EmployeeService) { }
 
-  ngOnInit() { 
-    console.log(this.displayEmployee)
+  ngOnInit() {
+    console.log(this.displayEmployee);
   }
 }
