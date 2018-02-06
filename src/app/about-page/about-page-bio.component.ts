@@ -33,6 +33,7 @@ export class AboutPageBioComponent implements OnInit {
     .subscribe(
       employee => this.selectedEmployee = employee
       , error => this.errorMessage = <any>error);
+    //this.selectedEmployee = this.route.snapshot.data['employee'];
   }
 
 }
