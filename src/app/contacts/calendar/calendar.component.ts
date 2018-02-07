@@ -10,35 +10,35 @@ import { EventColor } from 'calendar-utils';
   templateUrl: './calendar.component.html',
   styleUrls: ['./calendar.component.css']
 })
-class RedComponent implements EventColor {
-  constructor() { }
-  primary: '#ad2121';
-  secondary: '#FAE3E3';
-}
-class BlueComponent implements EventColor {
-  constructor() { }
-  primary: '#1e90ff';
-    secondary: '#D1E8FF';
-}
+// class RedComponent implements EventColor {
+//   constructor() { }
+//   primary: '#ad2121';
+//   secondary: '#FAE3E3';
+// }
+// class BlueComponent implements EventColor {
+//   constructor() { }
+//   primary: '#1e90ff';
+//     secondary: '#D1E8FF';
+// }
 export class CalendarComponent implements OnInit {
   view: string = 'month';
 
   viewDate: Date = new Date('2016-01-05');
   constructor() { }
-  events: CalendarEvent[] = [
-    {
-      start: new Date('2016-01-08'),
-      end: new Date('2016-01-10'),
-      title: 'One day excluded event',
-      color:  RedComponent
-    },
-    {
-      start: new Date('2016-01-01'),
-      end: new Date('2016-01-09'),
-      title: 'Multiple weeks event',
-      color: colors.blue
-    }
-  ];
+  // events: CalendarEvent[] = [
+  //   {
+  //     start: new Date('2016-01-08'),
+  //     end: new Date('2016-01-10'),
+  //     title: 'One day excluded event',
+  //     color:  EventColor
+  //   },
+  //   {
+  //     start: new Date('2016-01-01'),
+  //     end: new Date('2016-01-09'),
+  //     title: 'Multiple weeks event',
+  //     color: colors.blue
+  //   }
+  // ];
 
   // exclude weekends
   excludeDays: number[] = [0, 6];
