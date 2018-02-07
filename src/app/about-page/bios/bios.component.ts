@@ -18,6 +18,5 @@ export class BiosComponent implements OnInit {
               private employeeService: EmployeeService) { }
 
   ngOnInit() {
-    console.log(this.displayEmployee);
   }
 }
