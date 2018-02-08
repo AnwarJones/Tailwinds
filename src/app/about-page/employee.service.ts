@@ -60,13 +60,8 @@ export class EmployeeService {
     private handleError(error: HttpErrorResponse): Observable<any> {
         // in a real world app, we may send the server to some remote logging infrastructure
         // instead of just logging it to the console
-        if (error.error instanceof ErrorEvent) {
-            console.error(error.error.message);
-            return Observable.throw(error.error.message);
-        } else {
-            console.error(`Server error code ${error.status}, ${error.error}`);
-            return Observable.throw(error.error.message);
-        }
+        console.error(error.error.message);
+        return Observable.throw(error.message || `Server error code ${error.status}, ${error.error}`);
     }
 
     initializeEmployee(): IEmployee {
