@@ -61,7 +61,7 @@ export class EmployeeService {
         // in a real world app, we may send the server to some remote logging infrastructure
         // instead of just logging it to the console
         console.error(error.error.message);
-        return Observable.throw(error.error.message || `Server error code ${error.status}, ${error.error}`);
+        return Observable.throw(error.message || `Server error code ${error.status}, ${error.error}`);
     }
 
     initializeEmployee(): IEmployee {
