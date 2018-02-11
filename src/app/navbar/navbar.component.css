@@ -5,3 +5,16 @@
     /*Without this, clicking will make it sticky*/
     pointer-events: none;
 }
+.authStatus{
+    color: grey;
+    font-size: 12px;
+    line-height: 50px;
+    padding: 0 10px;
+    /*position: absolute;*/
+    right: 0;
+    top: 0; 
+
+}
+.authStatus a:hover{
+    text-decoration: underline;
+}

@@ -23,6 +23,7 @@ import { AboutPageCompanyComponent } from './about-page/about-page-company.compo
 import { FormsModule } from '@angular/forms';
 import { CalendarModule } from 'angular-calendar';
 import { CalendarComponent } from './contacts/calendar/calendar.component';
+import { AuthService } from './auth/auth.service';
 
 
 @NgModule({
@@ -51,7 +52,7 @@ import { CalendarComponent } from './contacts/calendar/calendar.component';
     AboutPageCompanyComponent,
     CalendarComponent
   ],
-    providers: [],
+    providers: [AuthService],
     bootstrap: [AppComponent]
 })
 export class AppModule { }
