@@ -1,7 +1,7 @@
 import { InMemoryDbService, InMemoryBackendConfig } from 'angular-in-memory-web-api';
 
 import { IEmployee} from '../employee';
-import { IEvent } from '../events/ievent';
+import {  IEventModel } from '../events/ievent';
 export class EmployeeData implements InMemoryDbService, InMemoryBackendConfig {
     createDb() {
         let employees: IEmployee[] = [
@@ -73,15 +73,15 @@ export class EmployeeData implements InMemoryDbService, InMemoryBackendConfig {
                 'firstName' : 'Anwar',
                 'lastName' : 'Jones',
                 'photoUrl': '/assets/Anwar.jpg',
-                'academics':[{
-                    'school':'Florida A&M University',
-                    'graduationYear':'2007',
-                    'major':'Business Administration',
-                    'degree':'Masters'
+                'academics': [{
+                    'school': 'Florida A&M University',
+                    'graduationYear': '2007',
+                    'major': 'Business Administration',
+                    'degree': 'Masters'
                 }],
                 'title': 'Head Husband',
-                'experience':[],
-                'statement':`Hey, Luke! May the Force be with you. Red Five standing by.
+                'experience': [],
+                'statement': `Hey, Luke! May the Force be with you. Red Five standing by.
                              You don't believe in the Force, do you? As you wish. I'm trying not to, kid.`
             },
             {
@@ -93,20 +93,20 @@ export class EmployeeData implements InMemoryDbService, InMemoryBackendConfig {
                 'academics':
                 [
                     {
-                    'school':'Holliday Montessori',
-                    'graduationYear':'2024',
-                    'major':'Elementary School',
-                    'degree':'Grade School Equivalency'
+                    'school': 'Holliday Montessori',
+                    'graduationYear': '2024',
+                    'major': 'Elementary School',
+                    'degree': 'Grade School Equivalency'
                     },
                     {
-                        'school':'Atlanta Montessori International',
-                        'graduationYear':'2016',
-                        'major':'Montessori',
-                        'degree':'Preschool Equivalency'
+                        'school': 'Atlanta Montessori International',
+                        'graduationYear': '2016',
+                        'major': 'Montessori',
+                        'degree': 'Preschool Equivalency'
                         }
                 ],
-                'experience':[],
-                'statement':`Hey, Luke! May the Force be with you.
+                'experience': [],
+                'statement': `Hey, Luke! May the Force be with you.
                              Red Five standing by. You don't believe in the Force, do you? 
                              As you wish. I'm trying not to, kid.`
 
@@ -117,30 +117,34 @@ export class EmployeeData implements InMemoryDbService, InMemoryBackendConfig {
                 'lastName' : 'Jones',
                 'photoUrl': '/assets/img_0018.jpg',
                 'title': 'Intern - Potty Training',
-                'academics':[
+                'academics': [
                     {
-                    'school':'Atlanta Montessori International',
-                    'graduationYear':'2017',
-                    'major':'Montessori',
-                    'degree':'Cutest Kid'
+                    'school': 'Atlanta Montessori International',
+                    'graduationYear': '2017',
+                    'major': 'Montessori',
+                    'degree': 'Cutest Kid'
                     }
                     ],
-                'experience':[],
+                'experience': [],
                 'statement': `Dantooine. They're on Dantooine. You mean it controls your actions?
                              Obi-Wan is here. The Force is with him. Oh God, my uncle. How am I ever gonna explain this?`
             }
         ];
-        let events: IEvent[] = [
+        let events: IEventModel[] = [
             {
                 'id': 1,
                 'eventTitle': 'First Event',
-                'eventDate': Date.parse('February 15, 2018'),
+                'eventStartDate': new Date('15 February 2018 19:00:00 CST'),
+                'eventEndDate': new Date ('15 February 2018 20:00:00 CST'),
+                'eventLocation': 'Linwood Multi-Purpose Center',
                 'eventDetails': 'Something is happening on this date'
             },
             {
                 'id': 2,
                 'eventTitle': 'Second Event',
-                'eventDate': Date.parse('March 1, 2018'),
+                'eventStartDate': new Date ('1 March 2018 15:30:00 CST'),
+                'eventEndDate': new Date('1 March 2018 17:00:00 CST'),
+                'eventLocation': 'University of Missouri - Kansas City',
                 'eventDetails': 'Something else is happening on this date'
             }
         ];

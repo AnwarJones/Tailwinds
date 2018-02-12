@@ -7,6 +7,10 @@
 
 const jwt = require('express-jwt');
 const jwks = require('jwks-rsa');
+const Event = require('./Models/Event');
+const Employee = require('./Models/Employee');
+const express = require('express');
+var router = express.Router();
 
 /*
  |--------------------------------------
@@ -42,8 +46,33 @@ const adminCheck = (req, res, next) => {
  */
 
   // GET API root
-  app.get('/api/', (req, res) => {
-    res.send('API works');
+  app.get('/api/events', (req, res) => {
+   Event.find()
+   .exec().then(docs =>{
+       var response = {
+           count: docs.length,
+           events: docs.map(doc => {
+               return {
+                   _id: doc._id,
+                   eventTitle: doc.eventTitle,
+                   eventStartDate: doc.eventStartDate,
+                   eventEndDate: doc.eventEndDate,
+                   eventDetails: doc.eventDetails,
+                   eventLocation: doc.eventLocation,
+                   request:{
+                       type: "GET",
+                       url: "http://localhost:3200/events"+ doc._id
+                   }
+               };
+           })
+       };
+       res.status(200).json(response)
+   }).catch(err=>{
+       console.log(err);
+       res.status(500).json({
+           error: err
+       })
+   });
   });
 
 };

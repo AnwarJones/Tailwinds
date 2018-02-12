@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { EventsServiceService } from './events-service.service';
-import { IEvent } from './ievent';
+import { IEventModel } from './ievent';
 
 @Component({
   selector: 'app-events',
@@ -9,8 +9,8 @@ import { IEvent } from './ievent';
   providers: [EventsServiceService]
 })
 export class EventsComponent implements OnInit {
-  events: IEvent[] = [];
-  errorMessage: string
+  events: IEventModel[] = [];
+  errorMessage: string;
 
   constructor(private _eventsService: EventsServiceService) { }
 

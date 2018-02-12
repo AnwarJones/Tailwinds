@@ -1,7 +1,10 @@
 
-export interface IEvent {
-    id:number,
-    eventTitle:string,
-    eventDate: number
-    eventDetails:string
+export interface IEventModel {
+    id: number;
+    eventTitle: string;
+    eventStartDate: Date;
+    eventEndDate: Date;
+    eventDetails?: string;
+    eventLocation: string;
+
 }

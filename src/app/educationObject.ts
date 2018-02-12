@@ -1,4 +1,4 @@
-export interface IEducationObject{
+export interface IEducationObject {
     school: string;
     graduationYear: string;
     major: string;
