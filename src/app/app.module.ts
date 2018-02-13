@@ -24,6 +24,8 @@ import { FormsModule } from '@angular/forms';
 import { CalendarModule } from 'angular-calendar';
 import { CalendarComponent } from './contacts/calendar/calendar.component';
 import { AuthService } from './auth/auth.service';
+import { EmployeesComponent } from './admin/employees/employees.component';
+import { ScheduleComponent } from './admin/schedule/schedule.component';
 
 
 @NgModule({
@@ -50,7 +52,9 @@ import { AuthService } from './auth/auth.service';
     StoriesComponent,
     EventsComponent,
     AboutPageCompanyComponent,
-    CalendarComponent
+    CalendarComponent,
+    EmployeesComponent,
+    ScheduleComponent
   ],
     providers: [AuthService],
     bootstrap: [AppComponent]

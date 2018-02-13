@@ -4,36 +4,36 @@ import { IEmployee} from '../employee';
 import {  IEventModel } from '../events/ievent';
 export class EmployeeData implements InMemoryDbService, InMemoryBackendConfig {
     createDb() {
-        let employees: IEmployee[] = [
+        const employees: IEmployee[] = [
             {
                 'id': 1,
                 'firstName' : 'Marvia',
                 'lastName' : 'Jones',
                 'title': 'Principal',
                 'photoUrl': '/assets/Marvia.jpg',
-                'academics':[
+                'academics': [
                     {
-                    'school':'University of Kansas',
-                    'graduationYear':'2014',
-                    'major':'Behavioral Science',
-                    'degree':'PhD'
+                    'school': 'University of Kansas',
+                    'graduationYear': '2014',
+                    'major': 'Behavioral Science',
+                    'degree': 'PhD'
                     },
                     {
-                        'school':'University of Kansas - Medical School',
-                        'graduationYear':'2012',
-                        'major':'Behavioral Science',
-                        'degree':'Masters'
+                        'school': 'University of Kansas - Medical School',
+                        'graduationYear': '2012',
+                        'major': 'Behavioral Science',
+                        'degree': 'Masters'
                     },
                     {
-                        'school':'Florida State University',
-                        'graduationYear':'2007',
-                        'major':'Chemistry',
-                        'degree':'Bachelors of Science'
+                        'school': 'Florida State University',
+                        'graduationYear': '2007',
+                        'major': 'Chemistry',
+                        'degree': 'Bachelors of Science'
                     }
                 ],
                 'experience': [
                     {
-                        'organization':'CSX',
+                        'organization': 'CSX',
                         'beginYear': '2007',
                         'endYear': '2009',
                         'title': 'Environmental Chemicals'
@@ -119,10 +119,10 @@ export class EmployeeData implements InMemoryDbService, InMemoryBackendConfig {
                     }
                     ],
                 'experience': [],
-                'statement': "Dantooine. They're on Dantooine. You mean it controls your actions?                             Obi-Wan is here. The Force is with him. Oh God, my uncle. How am I ever gonna explain this?"
+                'statement': "Dantooine. They're on Dantooine. You mean it controls your actions? Obi-Wan is here. The Force is with him. Oh God, my uncle. How am I ever gonna explain this?"
             }
         ];
-        let events: IEventModel[] = [
+        const events: IEventModel[] = [
             {
                 'id': 1,
                 'eventTitle': 'First Event',

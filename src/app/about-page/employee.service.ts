@@ -8,14 +8,21 @@ import 'rxjs/add/observable/throw';
 import 'rxjs/add/operator/map';
 import 'rxjs/add/observable/of';
 import { HttpClient, HttpErrorResponse, HttpHeaders } from '@angular/common/http';
+import { AuthService } from "../auth/auth.service";
+import { ENV } from "../core/env.config";
 
 
 @Injectable()
 export class EmployeeService {
-    private baseUrl = 'api/employees';
-    constructor (private http: HttpClient) { }
+    private baseUrl = `${ENV.BASE_API}employees`;
+    private get _authHeader(): string {
+        return `Bearer ${localStorage.getItem('access_token')}`;
+    }
+    constructor (private http: HttpClient,
+                 private auth: AuthService  ) { }
+
     getEmployees(): Observable<IEmployee[]> {
-        return this.http.get<IEmployee[]>(this.baseUrl);
+        return this.http.get<IEmployee[]>(this.baseUrl).catch(this.handleError);
     }
     getEmployee(id: number): Observable<IEmployee> {
         if (id === 0) {

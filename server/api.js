@@ -4,9 +4,9 @@
  | Dependencies
  |--------------------------------------
  */
-if (process.env.NODE_ENV !== 'production') {
-    require('dotenv').load();
-  }
+// if (process.env.NODE_ENV !== 'production') {
+//     require('dotenv').load();
+//   }
 const jwt = require('express-jwt');
 const jwks = require('jwks-rsa');
 const Event = require('./Models/Event');
@@ -64,7 +64,7 @@ const adminCheck = (req, res, next) => {
                    eventLocation: doc.eventLocation,
                    request:{
                        type: "GET",
-                       url: "http://localhost:3200/events"+ doc._id
+                       url: "http://localhost:3200/api/events"+ doc._id
                    }
                };
            })
@@ -77,5 +77,33 @@ const adminCheck = (req, res, next) => {
        })
    });
   });
+  app.get('/api/events/admin', jwtCheck, adminCheck, (req, res)=>{
+    Event.find()
+    .exec().then(docs =>{
+        var response = {
+            count: docs.length,
+            events: docs.map(doc => {
+                return {
+                    _id: doc._id,
+                    eventTitle: doc.eventTitle,
+                    eventStartDate: doc.eventStartDate,
+                    eventEndDate: doc.eventEndDate,
+                    eventDetails: doc.eventDetails,
+                    eventLocation: doc.eventLocation,
+                    request:{
+                        type: "GET",
+                        url: "http://localhost:3200/api/events/admin"+ doc._id
+                    }
+                };
+            })
+        };
+        res.status(200).json(response)
+    }).catch(err=>{
+        console.log(err);
+        res.status(500).json({
+            error: err
+        })
+    });
+  })
 
 };
