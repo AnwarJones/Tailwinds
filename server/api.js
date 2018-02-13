@@ -4,13 +4,16 @@
  | Dependencies
  |--------------------------------------
  */
-
+if (process.env.NODE_ENV !== 'production') {
+    require('dotenv').load();
+  }
 const jwt = require('express-jwt');
 const jwks = require('jwks-rsa');
 const Event = require('./Models/Event');
 const Employee = require('./Models/Employee');
 const express = require('express');
 var router = express.Router();
+
 
 /*
  |--------------------------------------
