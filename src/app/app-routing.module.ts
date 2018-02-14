@@ -1,10 +1,12 @@
-import { NgModule } from "@angular/core";
-import { RouterModule } from "@angular/router";
-import { WelcomeComponent } from "./welcome/welcome.component";
-import { ServicesComponent } from "./services/services.component";
-import { NewsComponent } from "./news/news.component";
-import { ResourcesComponent } from "./resources/resources.component";
-import { ContactsComponent } from "./contacts/contacts.component";
+import { NgModule } from '@angular/core';
+import { RouterModule } from '@angular/router';
+import { WelcomeComponent } from './welcome/welcome.component';
+import { ServicesComponent } from './services/services.component';
+import { NewsComponent } from './news/news.component';
+import { ResourcesComponent } from './resources/resources.component';
+import { ContactsComponent } from './contacts/contacts.component';
+import { AuthGuard } from './auth/auth.guard';
+import { AdminGuard } from './auth/admin.guard';
 
 @NgModule({
     imports: [
@@ -18,6 +20,7 @@ import { ContactsComponent } from "./contacts/contacts.component";
         {path: '**', redirectTo: 'welcome', pathMatch: 'full' }
         ])
     ],
+    providers: [ AuthGuard, AdminGuard],
     exports: [ RouterModule]
 })
 export class AppRoutingModule { }

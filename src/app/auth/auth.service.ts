@@ -46,21 +46,21 @@ export class AuthService {
     this.loggedIn = value;
   }
 
-  login() {
+  login(redirect?: string) {
     // Auth0 authorize request
     this.auth0.authorize();
   }
 
   handleAuth() {
     // When Auth0 hash parsed, get profile
-    this.auth0.parseHash(window.location.hash, (err, authResult) => {
+    this.auth0.parseHash((err, authResult) => {
       if (authResult && authResult.accessToken && authResult.idToken) {
-        window.location.hash = '';
         this._getProfile(authResult);
       } else if (err) {
-        console.error(`Error: ${err.error}`);
+        this._clearRedirect();
+        this.router.navigate(['/']);
+        console.error(`Error authenticating: ${err.error}`);
       }
-      this.router.navigate(['/']);
     });
   }
 
@@ -69,10 +69,16 @@ export class AuthService {
     this.auth0.client.userInfo(authResult.accessToken, (err, profile) => {
       if (profile) {
         this._setSession(authResult, profile);
+        this.router.navigate([localStorage.getItem('authRedirect') || '/']);
+        this._clearRedirect();
       } else if (err) {
         console.error(`Error authenticating: ${err.error}`);
       }
     });
+  }
+  private _clearRedirect() {
+    // Remove redirect from localStorage
+    localStorage.removeItem('authRedirect');
   }
 
   private _setSession(authResult, profile) {
@@ -102,6 +108,7 @@ export class AuthService {
     localStorage.removeItem('isAdmin');
     this.userProfile = undefined;
     this.setLoggedIn(false);
+    this._clearRedirect();
      // Return to homepage
      this.router.navigate(['/']);
   }
