@@ -26,6 +26,10 @@ import { CalendarComponent } from './contacts/calendar/calendar.component';
 import { AuthService } from './auth/auth.service';
 import { EmployeesComponent } from './admin/employees/employees.component';
 import { ScheduleComponent } from './admin/schedule/schedule.component';
+import { DatePipe } from '@angular/common';
+import { UtilsService } from './core/utils.service';
+import { EventsServiceService } from './events/events-service.service';
+import { FilterSortService } from './core/filter-sort.service';
 
 
 @NgModule({
@@ -56,7 +60,7 @@ import { ScheduleComponent } from './admin/schedule/schedule.component';
     EmployeesComponent,
     ScheduleComponent
   ],
-    providers: [AuthService],
+    providers: [AuthService, DatePipe, UtilsService, EventsServiceService, FilterSortService],
     bootstrap: [AppComponent]
 })
 export class AppModule { }

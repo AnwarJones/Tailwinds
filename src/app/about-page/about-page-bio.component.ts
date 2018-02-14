@@ -21,17 +21,12 @@ export class AboutPageBioComponent implements OnInit {
               private route: ActivatedRoute) { }
 
   ngOnInit(): void {
-    this.employeeService.getEmployees()
-    .subscribe(employees => this.employees = employees
-        , error => this.errorMessage = <any>error);
+    this.employees = this.route.snapshot.data['employees'];
     this.employeeSelect(1);
   }
   employeeSelect(id: number): void {
     this.selectedId = id;
-    this.employeeService.getEmployee(this.selectedId)
-    .subscribe(
-      employee => this.selectedEmployee = employee
-      , error => this.errorMessage = <any>error);
+    this.selectedEmployee = this.employees.find((employee) => employee.id === id);
     // this.selectedEmployee = this.route.snapshot.data['employee'];
   }
 

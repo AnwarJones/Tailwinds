@@ -1,20 +1,21 @@
-import { Injectable } from "@angular/core";
-import { Http, Response, Headers, RequestOptions } from "@angular/http";
-import { IEmployee } from "../employee";
-import { Observable } from "rxjs/Observable";
+import { Injectable } from '@angular/core';
+import { Http, Response, Headers, RequestOptions } from '@angular/http';
+import { IEmployee } from '../employee';
+import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/operator/do';
 import 'rxjs/add/operator/catch';
 import 'rxjs/add/observable/throw';
 import 'rxjs/add/operator/map';
 import 'rxjs/add/observable/of';
 import { HttpClient, HttpErrorResponse, HttpHeaders } from '@angular/common/http';
-import { AuthService } from "../auth/auth.service";
-import { ENV } from "../core/env.config";
+import { AuthService } from '../auth/auth.service';
+import { ENV } from '../core/env.config';
 
 
 @Injectable()
 export class EmployeeService {
-    private baseUrl = `${ENV.BASE_API}employees`;
+    // private baseUrl = `${ENV.BASE_API}employees`;
+    private baseUrl = 'api/employees';
     private get _authHeader(): string {
         return `Bearer ${localStorage.getItem('access_token')}`;
     }
@@ -40,8 +41,8 @@ export class EmployeeService {
            .catch(this.handleError);
     }
     saveEmployee( employee: IEmployee): Observable<IEmployee> {
-        let headers = new Headers({'Content-Type': 'application/json'});
-        let options = new RequestOptions({headers: headers});
+        const headers = new Headers({'Content-Type': 'application/json'});
+        const options = new RequestOptions({headers: headers});
 
         if (employee.id === 0) {
             return this.createEmployee(employee, options);

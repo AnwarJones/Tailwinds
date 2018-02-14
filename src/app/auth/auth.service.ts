@@ -33,7 +33,7 @@ export class AuthService {
     } else if (!this.tokenValid && lsProfile) {
       this.logout();
     }
-    if (this.tokenValid){
+    if (this.tokenValid) {
       this.userProfile = JSON.parse(localStorage.getItem('profile'));
       this.isAdmin = localStorage.getItem('isAdmin') === 'true';
       this.setLoggedIn(true);

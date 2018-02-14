@@ -11,8 +11,8 @@ import { EmployeeService } from '../employee.service';
 export class BiosComponent implements OnInit {
   @Input() displayEmployee: IEmployee;
   errorMessage: string;
-  imageheigth: number = 2;
-  imagewidth: number = 1;
+  imageheigth = 8;
+  imagewidth = 4;
 
   constructor(private route: ActivatedRoute,
               private employeeService: EmployeeService) { }

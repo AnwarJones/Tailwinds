@@ -1,38 +1,43 @@
 <div class="row">
     <div class="col">
-      <h4>{{displayEmployee?.firstName}} {{displayEmployee?.lastName}}</h4>
-      <h6>{{displayEmployee?.title}}</h6>
-        <img [src] = "displayEmployee?.photoUrl"
-        [style.width.px] = "imageWidth"
-        [style.height.px] = "imageHeight">
+        <div class="col">
+            <h4>{{displayEmployee?.firstName}} {{displayEmployee?.lastName}}</h4>
+            <h6>{{displayEmployee?.title}}</h6>
+            <br>
+            <br/>
+      
+            <h6>Academic Achievements</h6>
+            <ul>
+              <li *ngFor = "let sc of displayEmployee?.academics">
+                {{sc.school}} -- {{sc.graduationYear}}
+              </li>
+            </ul>
+          </div>
+          <div class="col">
+            <br/>
+      
+            <br/>
+      
+            <h6>Career Experience</h6>
+            <ul>
+              <li *ngFor = "let job of displayEmployee?.experience">
+                {{job.organization}} - {{job.title}} - {{job.endYear}}
+              </li>
+            </ul>          
+          </div>
+         
     </div>
     <div class="col">
-      <br>
-      <br/>
-
-      <h6>Academic Achievements</h6>
-      <ul>
-        <li *ngFor = "let sc of displayEmployee?.academics">
-          {{sc.school}} -- {{sc.graduationYear}}
-        </li>
-      </ul>
-    </div>
-    <div class="col">
-      <br/>
-
-      <br/>
-
-      <h6>Career Experience</h6>
-      <ul>
-        <li *ngFor = "let job of displayEmployee?.experience">
-          {{job.organization}} - {{job.title}} - {{job.endYear}}
-        </li>
-      </ul>          
-    </div>
+       
+          <img [src] = "displayEmployee?.photoUrl"
+          [style.width.px] = "imageWidth"
+          [style.height.px] = "imageHeight">
+      </div>
+    
   </div>
   <div class="row">
-    <div class="col-12">
+    <div class="col-5">
       <em>Personal Statement: </em>
-      {{displayEmployee?.statement}}
+      <p>{{displayEmployee?.statement}}</p>
     </div>
   </div>

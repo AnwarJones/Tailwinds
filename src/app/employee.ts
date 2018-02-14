@@ -1,5 +1,5 @@
-import { IEducationObject } from "./educationObject";
-import { IWorkExperience } from "./workExperience";
+import { IEducationObject } from './educationObject';
+import { IWorkExperience } from './workExperience';
 
 /*Defines the employee entity */
 export interface IEmployee {

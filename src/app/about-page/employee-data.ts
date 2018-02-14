@@ -63,7 +63,8 @@ export class EmployeeData implements InMemoryDbService, InMemoryBackendConfig {
                         'title': 'Directof of Policy, Programs and Evaluation'
                     }
                 ],
-                'statement':'I want to come with you to Alderaan.There"s nothing for me here now. I want to learn the ways of the Force and be a Jedi like my father before me. Your eyes can deceive you'
+                // tslint:disable-next-line:max-line-length
+                'statement': 'I want to come with you to Alderaan.There"s nothing for me here now. I want to learn the ways of the Force and be a Jedi like my father before me. Your eyes can deceive you'
             },
             {
                 'id': 2,
@@ -78,7 +79,8 @@ export class EmployeeData implements InMemoryDbService, InMemoryBackendConfig {
                 }],
                 'title': 'Head Husband',
                 'experience': [],
-                'statement': "Hey, Luke! May the Force be with you. Red Five standing by. You don't believe in the Force, do you? As you wish. I'm trying not to, kid."            },
+                // tslint:disable-next-line:max-line-length
+                'statement': 'Hey, Luke! May the Force be with you. Red Five standing by. You don\'t believe in the Force, do you? As you wish. I\'m trying not to, kid.'            },
             {
                 'id': 3,
                 'firstName' : 'Titus',
@@ -101,7 +103,8 @@ export class EmployeeData implements InMemoryDbService, InMemoryBackendConfig {
                         }
                 ],
                 'experience': [],
-                'statement': "Hey, Luke! May the Force be with you. Red Five standing by. You don't believe in the Force, do you? As you wish. I'm trying not to, kid."
+                // tslint:disable-next-line:max-line-length
+                'statement': 'Hey, Luke! May the Force be with you. Red Five standing by. You don\'t believe in the Force, do you? As you wish. I\'m trying not to, kid.'
 
             },
             {
@@ -119,7 +122,8 @@ export class EmployeeData implements InMemoryDbService, InMemoryBackendConfig {
                     }
                     ],
                 'experience': [],
-                'statement': "Dantooine. They're on Dantooine. You mean it controls your actions? Obi-Wan is here. The Force is with him. Oh God, my uncle. How am I ever gonna explain this?"
+                // tslint:disable-next-line:max-line-length
+                'statement': 'Dantooine. They\'re on Dantooine. You mean it controls your actions? Obi-Wan is here. The Force is with him. Oh God, my uncle. How am I ever gonna explain this?'
             }
         ];
         const events: IEventModel[] = [
