@@ -30,6 +30,7 @@ import { DatePipe } from '@angular/common';
 import { UtilsService } from './core/utils.service';
 import { EventsServiceService } from './events/events-service.service';
 import { FilterSortService } from './core/filter-sort.service';
+import { ServiceTemplateComponent } from './services/service-template/service-template.component';
 
 
 @NgModule({
@@ -58,7 +59,8 @@ import { FilterSortService } from './core/filter-sort.service';
     AboutPageCompanyComponent,
     CalendarComponent,
     EmployeesComponent,
-    ScheduleComponent
+    ScheduleComponent,
+    ServiceTemplateComponent
   ],
     providers: [AuthService, DatePipe, UtilsService, EventsServiceService, FilterSortService],
     bootstrap: [AppComponent]

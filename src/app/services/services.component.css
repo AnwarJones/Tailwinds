@@ -2,3 +2,6 @@
     margin: 0;
     width: 50%
 }
+ul{
+    list-style: none;
+}
