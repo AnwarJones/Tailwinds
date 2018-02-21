@@ -7,7 +7,7 @@
       <h1>Services</h1>
     </div>
   </div>
-  <div class="row" >
+  <!-- <div class="row" >
     <div class="col" >
       <ul class="btn-group-vertical btn-group-lg" role="group" aria-label="Service List">
         <li *ngFor = 'let s of servicesArray'>
@@ -19,4 +19,22 @@
     <div class="col">
         <app-service-template *ngIf='selectedService' [divService] = 'selectedService'></app-service-template>
     </div>
-  </div>
+  </div> -->
+  <div class="card card-inverse card-success text-left">
+      <div class=" card-header">
+        <ul class="nav nav-tabs card-header-tabs">
+          <li class="nav-item" *ngFor = "let s of servicesArray">
+            <a class="nav-link" (click) = 'clickedService(s)'>{{s.serviceName}}</a>
+          </li>
+        </ul>
+      </div>
+      <div class="card-block">
+          <h4 class="card-header">{{selectedService?.serviceName}}</h4>
+          <div class="card-text" [innerHTML]='selectedService?.serviceDescription'></div>
+      </div>
+    </div>
+
+
+</div>
+
+ 

@@ -22,22 +22,22 @@
       <li class="nav-item">
         <a class="nav-link" [routerLink]= "['/services']">Services</a>
       </li>
-      <li class="nav-item">
+      <!-- <li class="nav-item">
         <a class="nav-link" [routerLink]= "['/news']">News and Events</a>
-      </li>
-      <li class="nav-item">
+      </li> -->
+      <!-- <li class="nav-item">
         <a class="nav-link" [routerLink]= "['/resources']">Resources</a>
-      </li>
+      </li> -->
       <li class="nav-item">
         <a class="nav-link" [routerLink]= "['/contact']">Contact</a>
       </li>
     </ul>
-    <form class="form-inline my-2 my-lg-0">
+    <!-- <form class="form-inline my-2 my-lg-0">
       <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
       <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-    </form>
+    </form> -->
     <div class="authStatus">
-      <a *ngIf="!auth.loggedIn" (click) = "auth.login()">Log In</a>
+      <a *ngIf="!auth.loggedIn" (click) = "auth.login()"></a>
       <span *ngIf="auth.loggedIn">
         {{auth.userProfile?.name}}<span class="opacity-half">|</span><a (click)="auth.logout()">Log Out</a>
       </span>

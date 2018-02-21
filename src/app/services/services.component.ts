@@ -14,6 +14,7 @@ export class ServicesComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+    
     this.servicesArray = [
       {
         'serviceName':'Program Design',
@@ -73,6 +74,7 @@ export class ServicesComponent implements OnInit {
         `
       }
     ]
+    this.selectedService = this.servicesArray[0];
   }
   clickedService(service: IService): void {
     this.selectedService = service;

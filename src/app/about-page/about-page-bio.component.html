@@ -2,11 +2,11 @@
 <div class="panel panel-primary">
     <div class="panel-heading"><h1 style="color:rgb(70, 216, 57)">Meet our team</h1></div>
     <div class="row">
-      <div class="col-md-auto">
+      <div class="col-md">
         <p>At Tailwinds Consulting we believe that great relationships will lead to success.  We build a great relationship built around helping you reach your goals. Great relationships need great people, for our success and yours we have assembled a great team. </p>
         <ul *ngIf = "employees?.length > 1">
           <li style="display:inline !important" *ngFor="let em of employees">
-            <a class="btn btn-success active" role="button" (click) = "employeeSelect(em.id)" >{{em.firstName}} {{em.lastName}}</a>
+            <a class="btn btn-success active " role="button" (click) = "employeeSelect(em.id)" >{{em.firstName}} {{em.lastName}}</a>
           </li>
         </ul>
     </div>

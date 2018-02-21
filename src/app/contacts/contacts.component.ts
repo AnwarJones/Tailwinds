@@ -23,6 +23,7 @@ export class ContactsComponent implements OnInit {
   city = 'Kansas City';
   state = 'MO';
   zipCode = '64130';
+  telephone = '(816) 490-6198';
   // Contact Information
   categories = ['', 'Evaluation Inquiry', 'Speaking Engagement', 'Research Collaboration', 'Grant Writing Assistance'];
 
