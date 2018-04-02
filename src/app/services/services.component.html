@@ -22,9 +22,9 @@
   </div> -->
   <div class="card card-inverse card-success text-left">
       <div class=" card-header">
-        <ul class="nav nav-tabs card-header-tabs">
-          <li class="nav-item" *ngFor = "let s of servicesArray">
-            <a class="nav-link" (click) = 'clickedService(s)'>{{s.serviceName}}</a>
+        <ul class="nav nav-pills card-header-tabs">
+          <li class="nav-item active" *ngFor = "let s of servicesArray">
+            <a class="nav-link" data-toggle="pill" (click) = 'clickedService(s)'>{{s.serviceName}}</a>
           </li>
         </ul>
       </div>
