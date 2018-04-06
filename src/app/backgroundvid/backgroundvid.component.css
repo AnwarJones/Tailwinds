@@ -9,5 +9,16 @@
     background-position: center;
     background-size: cover;
     width: 100% !important;
-    height: auto  !important;
+    height: 100%  !important;
+}
+.overlay{
+  position:absolute;
+  text-align: center;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+.stylish-text{
+  color: aquamarine;
 }

@@ -7,3 +7,7 @@
 body{
     padding-top: 50px;
 }
+.stylish-text{
+    font-family: 'Stylish', sans-serif;
+    text-shadow: 4px 4px 4px #aaa;
+  }

@@ -31,6 +31,7 @@ import { UtilsService } from './core/utils.service';
 import { EventsServiceService } from './events/events-service.service';
 import { FilterSortService } from './core/filter-sort.service';
 import { ServiceTemplateComponent } from './services/service-template/service-template.component';
+import { AnimatedtextComponent } from './_animations/animatedtext/animatedtext.component';
 
 
 @NgModule({
@@ -60,7 +61,8 @@ import { ServiceTemplateComponent } from './services/service-template/service-te
     CalendarComponent,
     EmployeesComponent,
     ScheduleComponent,
-    ServiceTemplateComponent
+    ServiceTemplateComponent,
+    AnimatedtextComponent
   ],
     providers: [AuthService, DatePipe, UtilsService, EventsServiceService, FilterSortService],
     bootstrap: [AppComponent]
