@@ -1,5 +1,9 @@
 <div class="card offset.sm-7">
-  <div class="card-block"></div>
-      <h4 class="card-header">{{divService.serviceName}}</h4>
-      <div class="card-text" [innerHTML]='divService.serviceDescription'></div>
+  <div class="card-block"><h4 class="card-header">{{divService.serviceName}}</h4>
+  <div class="card-text"
+  [@fadeInAnimation]
+  [innerHTML]='divService.serviceDescription'>
+  </div>
+</div>
+      
 </div>

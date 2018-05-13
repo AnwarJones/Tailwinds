@@ -28,9 +28,12 @@
           </li>
         </ul>
       </div>
-      <div class="card-block">
-          <h4 class="card-header">{{selectedService?.serviceName}}</h4>
-          <div class="card-text" [innerHTML]='selectedService?.serviceDescription'></div>
+      <div class="card-block" >
+        <!-- <div  [@fadeInAnimation]>
+            <h4 class="card-header">{{selectedService?.serviceName}}</h4>
+            <div class="card-text" [innerHTML]='selectedService?.serviceDescription'></div>  
+        </div> -->
+        <app-service-template [divService]="selectedService"></app-service-template>
       </div>
     </div>
 

@@ -1,5 +1,11 @@
 <div class="row">
     <div class="col">
+       
+        <img [src] = "displayEmployee?.photoUrl"
+        [style.width.px] = "imagewidth"
+        [style.height.px] = "imageheight">
+  </div>
+    <div class="col">
         <div class="col">
             <h4>{{displayEmployee?.firstName}} {{displayEmployee?.lastName}}</h4>
             <h6>{{displayEmployee?.title}}</h6>
@@ -27,17 +33,12 @@
           </div>
          
     </div>
-    <div class="col">
-       
-          <img [src] = "displayEmployee?.photoUrl"
-          [style.width.px] = "imagewidth"
-          [style.height.px] = "imageheight">
-      </div>
+   
     
-  </div>
-  <div class="row">
+</div>
+<div class="row">
     <div class="col-5">
       <em>Personal Statement: </em>
       <p>{{displayEmployee?.statement}}</p>
     </div>
-  </div>
+</div>

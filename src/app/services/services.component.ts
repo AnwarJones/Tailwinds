@@ -2,11 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import {IService } from './iservice';
 import {IEmployee} from '../employee';
 import { ServiceTemplateComponent } from './service-template/service-template.component';
+import { fadeInAnimation } from '../_animations';
 
 @Component({
   templateUrl: './services.component.html'
   , styleUrls: ['./services.component.css']
- 
 })
 export class ServicesComponent implements OnInit {
   servicesArray: IService[]
