@@ -1,7 +1,7 @@
 #welcome-page {
     background-image: url("/assets/bird.jpg");
     /* Set a specific height */
-    height: 1000px;
+    height: 800px;
 
 
     /* Create the parallax scrolling effect */
@@ -20,8 +20,8 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    padding-top: 175px;
-    height: 1000px;
+    padding-top: 75px;
+    height: 800px;
 }
 .subtitle p{
     border-radius: 25px;
@@ -31,14 +31,21 @@
     font-weight: bold;
 }
 
-.info-div{
+.info-div .info-title{
     text-align: center;
     font-weight: bold;
 
 
 }
 .info-title{
-    font-size: 3.5em;
-    font-weight: bold;
+    font-size: 2.5em;
 
+}
+.main-text{
+    font-weight: bold;
+    font-size: 1em;
+}
+.end-text{
+    font-weight: bold;
+    font-size: 1.5em;
 }
