@@ -3,24 +3,25 @@
         <span class="navbar-toggler-icon"></span>
       </button>
   <div>
-    <h3 class="stylish-text">Tailwinds Consulting</h3>
+    <img height= 50px; src = "../assets/tailwinds-logo-small.png">
   </div>
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
-        <a class="nav-link" [routerLink]= "['/welcome']">Home <span class="sr-only">(current)</span></a>
+        <a class="nav-link" [routerLink]= "['/welcome']" data-toggle="collapse" ><img class="icon" src="https://png.icons8.com/office/30/000000/paper-plane.png">Home <span class="sr-only">(current)</span></a>
       </li>
-      <li class="nav-item dropdown" >
-        <a class="nav-link dropdown-toggle" id="navbarDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" [routerLink]= "['/about']">About</a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" [routerLink] = "['about/company']">Company Details</a>
-          <a class="dropdown-item" [routerLink] = "['about/mission']">Mission and Vision</a>
-          <a class="dropdown-item" [routerLink] = "['about/team']">Team Members</a>
-        </div>
+      <!-- <li class="nav-item dropdown" > -->
+        <li class="nav-item">
+        <a class="nav-link dropdown-toggle" id="navbarDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" [routerLink]= "['/about/team']"><img class="icon" src="https://png.icons8.com/office/30/000000/paper-plane.png">About</a>
+        <!-- <div class="dropdown-menu" aria-labelledby="navbarDropdown"> -->
+          <!-- <a class="dropdown-item" [routerLink] = "['about/company']" data-toggle="collapse" >Company Details</a> -->
+          <!-- <a class="dropdown-item" [routerLink] = "['about/mission']" data-toggle="collapse" >Mission and Vision</a> -->
+          <!-- <a class="dropdown-item" [routerLink] = "['about/team']" data-toggle="collapse" >Team Members</a> -->
+        <!-- </div> -->
       </li>
       <li class="nav-item">
-        <a class="nav-link" [routerLink]= "['/services']">Services</a>
+        <a class="nav-link" [routerLink]= "['/services']" data-toggle="collapse" ><img class="icon" src="https://png.icons8.com/office/30/000000/paper-plane.png">Services</a>
       </li>
       <!-- <li class="nav-item">
         <a class="nav-link" [routerLink]= "['/news']">News and Events</a>
@@ -29,7 +30,7 @@
         <a class="nav-link" [routerLink]= "['/resources']">Resources</a>
       </li> -->
       <li class="nav-item">
-        <a class="nav-link" [routerLink]= "['/contact']">Contact</a>
+        <a class="nav-link" [routerLink]= "['/contact']" data-toggle="collapse" ><img class="icon" src="https://png.icons8.com/office/30/000000/paper-plane.png">Contact</a>
       </li>
     </ul>
     <!-- <form class="form-inline my-2 my-lg-0">

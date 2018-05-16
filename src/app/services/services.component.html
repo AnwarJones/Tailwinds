@@ -1,13 +1,12 @@
-<div class="container-fluid">
-  <div class="parallax"></div>
-  <div class="row justify-content-center">
+<!-- <div class="parallax"></div> -->
+<div class="row justify-content-center">
 
 
-    <div id="title" class="col-4">
-      <h1>Services</h1>
-    </div>
+  <div id="title" class="col-4">
+    <h1>Services</h1>
   </div>
-  <!-- <div class="row" >
+</div>
+<!-- <div class="row" >
     <div class="col" >
       <ul class="btn-group-vertical btn-group-lg" role="group" aria-label="Service List">
         <li *ngFor = 'let s of servicesArray'>
@@ -20,24 +19,24 @@
         <app-service-template *ngIf='selectedService' [divService] = 'selectedService'></app-service-template>
     </div>
   </div> -->
-  <div class="card card-inverse card-success text-left">
-      <div class=" card-header">
-        <ul class="nav nav-pills card-header-tabs">
-          <li class="nav-item active" *ngFor = "let s of servicesArray">
-            <a class="nav-link" data-toggle="pill" (click) = 'clickedService(s)'>{{s.serviceName}}</a>
+
+<div class="row justify-content-center" style="overflow: auto;">
+  <div>
+      <ul class="nav nav-tabs">
+          <li class="nav-item active" *ngFor="let s of servicesArray">
+            <a class="nav-link" data-toggle="nav-tabs" (click)='clickedService(s)'>{{s.serviceName}}</a>
           </li>
         </ul>
-      </div>
-      <div class="card-block" >
-        <!-- <div  [@fadeInAnimation]>
+  </div> 
+  <div class="card-block">
+    <!-- <div  [@fadeInAnimation]>
             <h4 class="card-header">{{selectedService?.serviceName}}</h4>
             <div class="card-text" [innerHTML]='selectedService?.serviceDescription'></div>  
         </div> -->
-        <app-service-template [divService]="selectedService"></app-service-template>
-      </div>
-    </div>
-
-
+    <app-service-template [divService]="selectedService"></app-service-template>
+  </div>
 </div>
+
+
 
  

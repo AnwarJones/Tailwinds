@@ -12,7 +12,7 @@ export class BiosComponent implements OnInit {
   @Input() displayEmployee: IEmployee;
   errorMessage: string;
   imageheight = 500;
-  imagewidth = 500;
+  imagewidth = 350;
 
   constructor(private route: ActivatedRoute,
               private employeeService: EmployeeService) { }

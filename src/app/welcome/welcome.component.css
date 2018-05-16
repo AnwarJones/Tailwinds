@@ -1,0 +1,44 @@
+#welcome-page {
+    background-image: url("/assets/bird-3158784.jpg");
+    /* Set a specific height */
+    height: 1000px;
+
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+
+}
+#trans-box{
+    background-color: #ffffff;
+    opacity: 0.4;
+    filter: alpha(opacity=40);
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: 175px;
+    height: 1000px;
+}
+.subtitle p{
+    border-radius: 25px;
+    width: 150px;
+    height: 75px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.info-div{
+    text-align: center;
+    font-weight: bold;
+
+
+}
+.info-title{
+    font-size: 3.5em;
+    font-weight: bold;
+
+}

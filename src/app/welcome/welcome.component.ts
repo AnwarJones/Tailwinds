@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 
 @Component({
   templateUrl: './welcome.component.html'
-  //, styleUrls: ['../parallax.css']
+  ,styleUrls: ['./welcome.component.css']
 })
 export class WelcomeComponent implements OnInit {
 

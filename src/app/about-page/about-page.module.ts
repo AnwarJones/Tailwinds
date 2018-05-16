@@ -19,8 +19,8 @@ import { EmployeeResolver } from './employee-resolver.service';
                 {path: '', component: AboutPageComponent},
                 { path: 'mission', component: AboutPageMissionComponent},
                 {   path: 'team',
-                    component: AboutPageBioComponent,
-                    resolve: {employees: EmployeeResolver}
+                    component: AboutPageBioComponent
+                    //resolve: {employees: EmployeeResolver}
                     // children: [
                     //     { path: '', redirectTo: 'about-page', pathMatch: 'full'},
                     //     { path: ':id', component: BiosComponent}

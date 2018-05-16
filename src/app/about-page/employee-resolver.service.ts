@@ -14,22 +14,22 @@ export class EmployeeResolver implements Resolve<IEmployee> {
     constructor(private employeeService: EmployeeService,
                 private router: Router) { }
     resolve (route: ActivatedRouteSnapshot, state: RouterStateSnapshot): Observable<IEmployee> {
-        // const id = route.params['id'];
-        // if (isNaN(id)) {
-        //     console.log(`Employee id was not a number: ${id}`)
-        //     this.router.navigate(['/team']);
-        //     return Observable.of(null);
-        // }
-        // return this.employeeService.getEmployee(+id)
-        // .map(employee => {
-        //     if (employee) {
-        //         return employee;
-        //     }
-        //     console.log(`Product was not found: ${id}`);
-        //     this.router.navigate(['/team']);
-        //     return null;
-        // })
-        return this.employeeService.getEmployees()
+        const id = route.params['id'];
+        if (isNaN(id)) {
+            console.log(`Employee id was not a number: ${id}`)
+            this.router.navigate(['/team']);
+            return Observable.of(null);
+        }
+        return this.employeeService.getEmployee(+id)
+        .map(employee => {
+            if (employee) {
+                return employee;
+            }
+            console.log(`Product was not found: ${id}`);
+            this.router.navigate(['/team']);
+            return null;
+        })
+        // return this.employeeService.getEmployees()
         .catch(error => {
             console.log(`Retrieval error: ${error}`);
             this.router.navigate(['/team']);

@@ -7,6 +7,7 @@ import { ResourcesComponent } from './resources/resources.component';
 import { ContactsComponent } from './contacts/contacts.component';
 import { AuthGuard } from './auth/auth.guard';
 import { AdminGuard } from './auth/admin.guard';
+import { AboutPageBioComponent } from './about-page/about-page-bio.component';
 
 @NgModule({
     imports: [
@@ -16,6 +17,7 @@ import { AdminGuard } from './auth/admin.guard';
         {path: 'news', component: NewsComponent },
         {path: 'resources', component: ResourcesComponent },
         {path: 'contact', component: ContactsComponent },
+        {path: 'about/team',component: AboutPageBioComponent},
         {path: '', redirectTo: 'welcome', pathMatch: 'full' },
         {path: '**', redirectTo: 'welcome', pathMatch: 'full' }
         ])
