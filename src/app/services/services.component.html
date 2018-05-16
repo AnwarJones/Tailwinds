@@ -21,20 +21,25 @@
   </div> -->
 
 <div class="row justify-content-center" style="overflow: auto;">
-  <div>
+  <div class="col-7">
       <ul class="nav nav-tabs">
           <li class="nav-item active" *ngFor="let s of servicesArray">
             <a class="nav-link" data-toggle="nav-tabs" (click)='clickedService(s)'>{{s.serviceName}}</a>
           </li>
         </ul>
-  </div> 
-  <div class="card-block">
-    <!-- <div  [@fadeInAnimation]>
-            <h4 class="card-header">{{selectedService?.serviceName}}</h4>
-            <div class="card-text" [innerHTML]='selectedService?.serviceDescription'></div>  
-        </div> -->
-    <app-service-template [divService]="selectedService"></app-service-template>
+        <div class="row justify-content-center">
+
+        <div class="card-block">
+          <!-- <div  [@fadeInAnimation]>
+                  <h4 class="card-header">{{selectedService?.serviceName}}</h4>
+                  <div class="card-text" [innerHTML]='selectedService?.serviceDescription'></div>  
+              </div> -->
+          <app-service-template [divService]="selectedService"></app-service-template>
+        </div> 
+      </div> 
+ 
   </div>
+   
 </div>
 
 
