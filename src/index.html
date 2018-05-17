@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8">
   <title>TailWindsSite</title>
@@ -10,9 +11,17 @@
   <link href="https://fonts.googleapis.com/css?family=Stylish" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Libre+Baskerville&amp;subset=latin-ext" rel="stylesheet">
 </head>
+
 <body>
-  
+
   <app-root></app-root>
 
-  <a href="https://icons8.com">Icon pack by Icons8</a></body>
+  <a href="https://icons8.com">Icon pack by Icons8</a>
+</body>
+<script type="text/javascript">
+  $('.navbar-nav>li>a').on('click', function(){
+    $('.navbar-collapse').collapse('hide');
+});
+</script>
+
 </html>
