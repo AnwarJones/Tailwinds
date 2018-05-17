@@ -1,12 +1,19 @@
 <nav class="navbar fixed-top navbar-expand-lg navbar-toggleable-md navbar-light bg-light">
-    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <button class="navbar-toggler navbar-toggler-right" 
+    type="button" 
+    data-toggle="collapse" 
+    data-target="#navbarSupportedContent" 
+    aria-controls="navbarSupportedContent" 
+    aria-expanded="false" 
+    aria-label="Toggle navigation"
+    (click)="toggleCollapsed()">
         <span class="navbar-toggler-icon"></span>
       </button>
   <div>
     <img height= 75px width="250px" src = "../assets/tailwinds-logo-small.png">
   </div>
 
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+  <div  id="navbarSupportedContent" [ngClass]="{'collapse':collapsed, 'navbar-collapse':true}">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
         <a class="nav-link" [routerLink]= "['/welcome']" data-toggle="collapse" ><img class="icon" src="../assets/icons8-paper-plane-30.png">Home <span class="sr-only">(current)</span></a>
