@@ -2,7 +2,7 @@
 <div class="row justify-content-center">
 
 
-  <div id="title" class="col-4">
+  <div id="title" class="col-4 center-block">
     <h1>Services</h1>
   </div>
 </div>
@@ -21,7 +21,7 @@
   </div> -->
 
 <div class="row justify-content-center" style="overflow: auto;">
-  <div class="col-7">
+  <div class="col-md-8">
       <ul class="nav nav-tabs">
           <li class="nav-item active" *ngFor="let s of servicesArray">
             <a class="nav-link" data-toggle="nav-tabs" (click)='clickedService(s)'>{{s.serviceName}}</a>
@@ -29,7 +29,7 @@
         </ul>
         <div class="row justify-content-center">
 
-        <div class="card-block">
+        <div class="card-block w-100">
           <!-- <div  [@fadeInAnimation]>
                   <h4 class="card-header">{{selectedService?.serviceName}}</h4>
                   <div class="card-text" [innerHTML]='selectedService?.serviceDescription'></div>  

@@ -1,5 +1,5 @@
 #welcome-page {
-    background-image: url("/assets/bird.jpg");
+    background-image: url("/assets/KansasCitySkyline.jpg");
     /* Set a specific height */
     height: 800px;
 
@@ -43,7 +43,7 @@
 }
 .main-text{
     font-weight: bold;
-    font-size: 1em;
+    font-size: 1.5em;
 }
 .end-text{
     font-weight: bold;
